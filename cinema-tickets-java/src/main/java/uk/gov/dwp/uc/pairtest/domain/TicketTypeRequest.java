@@ -6,7 +6,14 @@ package uk.gov.dwp.uc.pairtest.domain;
 
 public final class TicketTypeRequest {
 
+    /**
+     * Number of tickets
+     */
     private int noOfTickets;
+
+    /**
+     * Type of tickets (ADULT,CHILD,INFANT)
+     */
     private Type type;
 
     public TicketTypeRequest(Type type, int noOfTickets) {
@@ -14,14 +21,25 @@ public final class TicketTypeRequest {
         this.noOfTickets = noOfTickets;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getNoOfTickets() {
         return noOfTickets;
     }
 
+    /**
+     *
+     * @return
+     */
     public Type getTicketType() {
         return type;
     }
 
+    /**
+     * ENUM
+     */
     public enum Type {
         ADULT(20), CHILD(10) , INFANT(0);
         private int price;
