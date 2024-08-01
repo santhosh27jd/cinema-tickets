@@ -24,6 +24,11 @@
 
 #--- BUILD TOOL ---#
  - Maven
+#--- HOW TO RUN ---#
+ - Import the project as Maven project
+ - mvn clean install
+ - Run all test in Ticket Service Test
+
 
 
 
