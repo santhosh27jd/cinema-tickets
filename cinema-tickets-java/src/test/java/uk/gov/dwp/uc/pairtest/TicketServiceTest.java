@@ -47,6 +47,17 @@ public class TicketServiceTest {
     }
 
     /**
+     *
+     */
+    @Test
+    public void accountIdIsNull_Throw_Exception(){
+        Long accountId = null;
+        TicketTypeRequest ticketTypeRequestAdult = new TicketTypeRequest(TicketTypeRequest.Type.ADULT,3);
+        InvalidPurchaseException exception = assertThrows(InvalidPurchaseException.class, ()->ticketService.purchaseTickets(accountId,ticketTypeRequestAdult));
+        assertEquals("Account id is not valid.", exception.getMessage());
+    }
+
+    /**
      * Invalid ticket purchase
      */
     @Test
