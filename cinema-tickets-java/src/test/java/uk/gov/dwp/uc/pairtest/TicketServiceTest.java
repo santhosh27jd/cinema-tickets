@@ -201,5 +201,14 @@ public class TicketServiceTest {
         TicketTypeRequest ticketTypeRequestAdult = new TicketTypeRequest(TicketTypeRequest.Type.ADULT,1);
         ticketService.purchaseTickets(accountId,ticketTypeRequestAdult);
     }
+    /**
+     * Ticket purchase success with Wrapper account id
+     */
+    @Test
+    public void ticket_purchase_success_with_wrapper(){
+        Long accountId = Long.valueOf(678);
+        TicketTypeRequest ticketTypeRequestAdult = new TicketTypeRequest(TicketTypeRequest.Type.ADULT,1);
+        ticketService.purchaseTickets(accountId,ticketTypeRequestAdult);
+    }
 
 }
